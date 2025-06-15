@@ -1,10 +1,38 @@
 <!DOCTYPE html>
-<html>
-<head><title>Condividi Schermo</title></head>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Condividi Schermo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f3f3f3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+    video {
+      width: 90%;
+      max-width: 1000px;
+      border: 3px solid #000;
+      margin-bottom: 1rem;
+    }
+    button {
+      padding: 10px 20px;
+      background: #d9534f;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+  </style>
+</head>
 <body>
-  <h2>Stai condividendo lo schermo</h2>
-  <video autoplay muted playsinline id="screen" style="width: 80%; border: 2px solid #000;"></video>
-  <script src="/socket.io/socket.io.js"></script>
+  <h2>🟢 Stai condividendo lo schermo</h2>
+  <video autoplay muted playsinline id="screen"></video>
+  <button id="stopBtn">Termina Condivisione</button>
   <script src="script.js"></script>
 </body>
 </html>
